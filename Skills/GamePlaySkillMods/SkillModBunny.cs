@@ -49,8 +49,9 @@ namespace RRFull.Skills
             if ((bool)Config.ExtraConfig.Bunnyhop.Value && Convert.ToBoolean(WAPI.GetAsyncKeyState((int)VirtualKeys.Space) & 0x8000))
             {
                 Client.LocalPlayer.BunnyJump();
-                if ((bool)Config.ExtraConfig.autostrafe.Value)
-                    Client.LocalPlayer.AutoStrafe();
+                //Autstrafer causes vac errors for some reason, enable with care.
+				//if ((bool)Config.ExtraConfig.autostrafe.Value)
+                    //Client.LocalPlayer.AutoStrafe();
             }
             return true;
 
