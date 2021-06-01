@@ -110,7 +110,7 @@ namespace RRFull.GenericObjects
         public int m_iMinGust => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_iMinGust"]; // 0x09F0; //(int )
         public int m_iMaxGust => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_iMaxGust"]; // 0x09F4; //(int )
         public int m_flMinGustDelay => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_flMinGustDelay"]; // 0x09F8; // (float )
-        public int m_flMaxGustDelay => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_flMaxGustDelay "]; // 0x09FC; //(float )
+        public int m_flMaxGustDelay => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_flMaxGustDelay"]; // 0x09FC; //(float )
         public int m_iGustDirChange => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_iGustDirChange"]; // 0x0A04; //(int )
         public int m_iWindSeed => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_iWindSeed"]; // 0x09E0; //(int )
         public int m_iInitialWindDir => m_EnvWindShared + g_Globals.NetVars["DT_EnvWindShared::m_iInitialWindDir"]; // 0x0A44; // (int )
