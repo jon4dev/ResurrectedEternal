@@ -6,6 +6,9 @@ Final Version
 Inside GenericObjects folder you can find the equivalent file for updating the offsets.
 The only one you really need to update is the dwGetAllClasses offset since the signature scanner cant find it.
 
+# Updating Signatures
+Signatures can be found inside the Generators.cs
+
 ## tl:dr
 everythings included cuz dunno how git and im a lazy cunt
 fuck you
