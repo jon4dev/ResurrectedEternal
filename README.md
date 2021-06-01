@@ -16,4 +16,4 @@ fuck you
 
 ## shoutouts
 
-OnTheFly, eXo, y3t1y3t, ZAT, TheRioMiner
+aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner
