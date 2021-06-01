@@ -13,3 +13,7 @@ If a signature breaks you can update the ./configs/signatures.json file or updat
 ## tl:dr
 everythings included cuz dunno how git and im a lazy cunt
 fuck you
+
+## shoutouts
+
+OnTheFly, eXo, y3t1y3t, ZAT, TheRioMiner
