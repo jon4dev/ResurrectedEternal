@@ -236,8 +236,8 @@ namespace RRFull.GenericObjects
 
         //this shit is a simple float array, most of them are overridden by the convars.
         public int m_flPostProcessParameters => g_Globals.NetVars["DT_PostProcessController::m_flPostProcessParameters"];
-        public int m_flVignetteBlurStrength => g_Globals.NetVars["m_flPostProcessParameters::005"]; //0x9EC; //0x0014
-        public int m_flFadetoblackStrength => g_Globals.NetVars["m_flPostProcessParameters::006"]; //0x9F0‬ //0x0018
+        public int m_flVignetteBlurStrength => m_flPostProcessParameters + g_Globals.NetVars["m_flPostProcessParameters::005"]; //0x9EC; //0x0014
+        public int m_flFadetoblackStrength => m_flPostProcessParameters + g_Globals.NetVars["m_flPostProcessParameters::006"]; //0x9F0‬ //0x0018
         #endregion
 
         public int m_clrRender => g_Globals.NetVars["DT_TestTraceline::m_clrRender"];
