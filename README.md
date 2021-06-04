@@ -16,4 +16,4 @@ fuck you
 
 ## shoutouts
 
-aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner - reactioN
+aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner - frk - ReactiioN
