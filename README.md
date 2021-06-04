@@ -8,7 +8,7 @@ Inside GenericObjects folder you can find the equivalent file for updating the o
 The only one you really need to update is the dwGetAllClasses offset since the signature scanner cant find it.
 
 # Updating Signatures
-If a signature breaks you can update the ./configs/signatures.json file or update the sigs inside the Generators.cs and delete the signatures.json.
+If a signature breaks you can update the ./configs/signatures.json file or update the sigs inside the Generators.cs and delete the signatures.json. Please refer to the hazedumper signatures if you need to do that. https://github.com/frk1/hazedumper/blob/master/config.json
 
 ## tl:dr
 everythings included cuz dunno how git and im a lazy cunt
