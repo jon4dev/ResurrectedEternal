@@ -1,5 +1,5 @@
 # ResurrectedEternal
-Aimbot, Visuals, Glow, Neon, Environment- & Sun control plus millions of other features and all engine entities are included.
+Aimbot, Visuals, Glow, Neon, Environment- & Sun control plus millions of other features and (nearly) all engine entities are included.
 Visit https://rrcheats.eu for the addons or to download a compiled assembly.
 Final Version
 
