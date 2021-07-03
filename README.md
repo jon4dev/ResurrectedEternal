@@ -1,7 +1,12 @@
-# ResurrectedEternal
-Aimbot, Visuals, Glow, Neon, Environment- & Sun control plus millions of other features and (nearly) all engine entities are included.
+# Resurrected Eternal
+Featuring Aimbot, Visuals, Glow, Neon, Environment- & Sun control plus millions of other features and (nearly) all engine entities are included.
 Visit https://rrcheats.eu for the addons or to download a compiled assembly.
-Final Version
+
+# HvHARDCORE
+Part of the Project. Visit our project page on https://hvhc.eu and play on our official ranked servers to gather specific statistics about yourself such as: hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.
+Join the Madness.
+
+## Final Version
 
 # Updating Offsets
 Inside GenericObjects folder you can find the equivalent file for updating the offsets.
