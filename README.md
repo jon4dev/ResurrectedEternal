@@ -6,7 +6,7 @@ Visit https://rrcheats.eu for the addons or to download a compiled assembly.
 Part of the Project. Visit our project page on https://hvhc.eu and play on our official ranked servers to gather specific statistics about yourself such as: hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.
 Join the Madness.
 
-## Final Version
+
 
 # Updating Offsets
 Inside GenericObjects folder you can find the equivalent file for updating the offsets.
@@ -21,3 +21,5 @@ yep big cock
 ## shoutouts
 
 aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner - frk - ReactiioN
+
+## Final Version (most likely)
