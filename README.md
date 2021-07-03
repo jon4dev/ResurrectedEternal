@@ -19,7 +19,7 @@ Log in using steam and become part of "EUROPES MOST WANTED" and to see how much 
 <strong>Join the Madness</strong>.
 
 # VAC Proof?
-Using the "unchanged" compiled assembly might or might not become detected in the future.<br> So the current status is: ![#f03c15]<em>Use at own Risk</em><br>
+Using the "unchanged" compiled assembly might or might not become detected in the future.<br> So the current status is: <strong><em>Use at own Risk</em></strong><br>
 To get a <strong>version that is proof until the end of time</strong> (or if VAC releases a heavy update),<br> download a compiled assembly from our project page on rrcheats.eu
 
 # Updating Offsets
