@@ -6,7 +6,9 @@
 External Counter-Strike: Global Offensive Multihack.<br>
 Project Page: https://rrcheats.eu // https://hvhc.eu<br><br>
 Featuring Aimbot, Visuals (Overlay/ESP), Glow, Neon, Environment- & Sun control, integrated sound engine using NAudio to play hitmarker sound and your favourite meme sounds plus millions of other features and (nearly) all engine entities are included.<br><br>
-Visit https://rrcheats.eu for the addons or to download a compiled assembly.
+Visit https://rrcheats.eu for the addons or to download a compiled assembly.<br>
+<br>
+Licensed under the <a href="https://github.com/sirk1x/ResurrectedEternal/blob/main/LICENSE">GNU Affero General Public License v3.0</a>
 
 # HvHARDCORE
 Part of the Project. Visit our project page on https://hvhc.eu and play on our official ranked servers to gather specific statistics about yourself such as: <br>hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.<br>
