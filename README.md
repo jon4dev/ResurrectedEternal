@@ -18,7 +18,9 @@ Part of the Project. Visit our project page on https://hvhc.eu and play on our o
 Log in using steam and become part of "EUROPES MOST WANTED" and to see how much growth you've had for 30 days.<br>
 <strong>Join the Madness</strong>.
 
-
+# VAC Proof?
+Using the "unchanged" compiled assembly might or might become detected in the future. So the current status is: <em style="colo: goldenrod;">Use at own Risk</em><br>
+To get a <strong>version that is proof until the end of time</strong> (or if VAC releases a heavy update), download a compiled assembly from our project page on rrcheats.eu
 
 # Updating Offsets
 Inside GenericObjects folder you can find the "equivalent" file for updating the offsets.<br>
