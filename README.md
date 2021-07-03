@@ -8,6 +8,9 @@ Project Page: https://rrcheats.eu // https://hvhc.eu<br><br>
 Featuring Aimbot, Visuals (Overlay/ESP), Glow, Neon, Environment- & Sun control, integrated sound engine using NAudio to play hitmarker sound and your favourite meme sounds plus millions of other features and (nearly) all engine entities are included.<br><br>
 Visit https://rrcheats.eu for the addons or to download a compiled assembly.<br>
 <br>
+<a href="https://rrcheats.eu/page/features">Compiled list of (mostly) all Features here.</a>
+
+<br>
 Licensed under the <a href="https://github.com/sirk1x/ResurrectedEternal/blob/main/LICENSE">GNU Affero General Public License v3.0</a>
 
 # HvHARDCORE
