@@ -15,7 +15,7 @@ Part of the Project. Visit our project page on https://hvhc.eu and play on our o
 
 
 # Updating Offsets
-Inside GenericObjects folder you can find the equivalent file for updating the offsets.<br>
+Inside GenericObjects folder you can find the "equivalent" file for updating the offsets.<br>
 The only one you really need to update is the <strong>dwGetAllClasses</strong> offset since the signature scanner cant find it.<br>
 <br>
 # Updating Signatures
