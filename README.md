@@ -1,3 +1,11 @@
+<p align="center">
+  <img width="460" height="300" src="https://rrcheats.eu/assets/flex/de_mirage_dark.jpg">
+</p>
+
+# Short Summary
+External Counter-Strike: Global Offensive Multihack.<br>
+Project Page: https://rrcheats.eu // https://hvhc.eu
+
 # Resurrected Eternal
 Featuring Aimbot, Visuals, Glow, Neon, Environment- & Sun control, integrated sound engine using NAudio to play hitmarker sound and your favourite meme sounds plus millions of other features and (nearly) all engine entities are included.
 Visit https://rrcheats.eu for the addons or to download a compiled assembly.
