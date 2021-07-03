@@ -15,6 +15,7 @@ Licensed under the <a href="https://github.com/sirk1x/ResurrectedEternal/blob/ma
 
 # HvHARDCORE
 Part of the Project. Visit our project page on https://hvhc.eu and play on our official ranked servers to gather specific statistics about yourself such as: <br>hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.<br>
+Log in using steam and become part of "EUROPES MOST WANTED" and to see how much growth you've had for 30 days.<br>
 <strong>Join the Madness</strong>.
 
 
