@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="460" height="300" src="https://rrcheats.eu/assets/flex/de_mirage_dark.jpg">
+  <img width="100%" height="480" src="https://rrcheats.eu/assets/flex/de_mirage_dark.jpg">
 </p>
 
 # Short Summary
