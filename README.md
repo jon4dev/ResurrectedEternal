@@ -2,7 +2,7 @@
   <img width="100%" height="480" src="https://rrcheats.eu/assets/flex/beautiful.jpg">
 </p>
 
-# Resurrected Eternal - Summary
+# Resurrected Eternal (V3) - Summary
 External Counter-Strike: Global Offensive Multihack.<br>
 Project Page: https://rrcheats.eu // https://hvhc.eu<br><br>
 Featuring Aimbot, Visuals (Overlay/ESP), Glow, Neon, Environment- & Sun control, integrated sound engine using NAudio to play hitmarker sound and your favourite meme sounds plus millions of other features and (nearly) all engine entities are included.<br><br>
