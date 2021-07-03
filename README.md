@@ -23,3 +23,5 @@ yep big cock
 aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner - frk - ReactiioN
 
 ## Final Version (most likely)
+
+![alt text](https://github.com/sirk1x/ResurrectedEternal/blob/main/magnum.jpg?raw=true)
