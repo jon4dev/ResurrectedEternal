@@ -19,7 +19,7 @@ Featuring
 
 <br>
 <a href="https://rrcheats.eu/page/features">Compiled list of (mostly) all Features here.</a><br><br>
-br><br>
+<br>
 Visit the project page for the addons or to download a <strong>VAC Proof</strong> compiled hack handcrafted by our artificial intelligence cloud network to keep you safe at all times.<br>
 
 Uses Fody Weavers to compile single executable.
