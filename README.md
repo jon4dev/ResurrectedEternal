@@ -27,7 +27,7 @@ Uses Fody Weavers to compile single executable.
 
 # Instructions
 
-## How to Compile:
+- How to Compile:
 1. Download 
 2. Open .sln 
 3. Wait for NuGet to do its thing. 
@@ -36,7 +36,7 @@ Uses Fody Weavers to compile single executable.
 6. ??? 
 7. Profit!
 
-## How to Run:
+- How to Run:
 1. <a href="https://www.foreverware.gay/page/install" target="_blank">Download Hack</a>
 2. Put Hack somewhere safe. (C:\notahack\AABBCCDD3344.exe)
 3. Run Hack or CSGO.
@@ -44,7 +44,7 @@ Uses Fody Weavers to compile single executable.
 5. ???
 6. Profit!
 
-## Navigation
+- Navigation
 
 1. Menukey: Insert
 2. PanicKey: Pos1
@@ -52,10 +52,11 @@ Uses Fody Weavers to compile single executable.
 
 
 # PROJECT: HvHARDCORE /// LAST MAN STANDING
+```
 Visit us on our website and play on our official <strong>ranked servers</strong> to gather specific statistics about yourself such as: <br>hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.<br>
 Log in using steam and become part of "EUROPES MOST WANTED" and to see detailed statistics about how much growth you've had for 30 days.<br><br>
 <strong>Join the Madness</strong>.
-
+```
 
 # Dev Shit
 
