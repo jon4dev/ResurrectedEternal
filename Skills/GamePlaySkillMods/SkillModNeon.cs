@@ -1,4 +1,4 @@
-﻿using RRFull.BaseObjects;
+using RRFull.BaseObjects;
 using RRFull.ClientObjects;
 using RRFull.Memory;
 using SharpDX;
@@ -72,23 +72,23 @@ namespace RRFull.Skills
                 return;
             IntPtr _addr = Client.m_dwGlowManager.m_pGlowArray + (idx * 0x38);
 
-            var verify = MemoryLoader.instance.Reader.Read<IntPtr>(_addr);
-            //ILog.AddToLog("[GLOW]Before Write - Verify ", idx + " " + verify.ToString());
-            if (verify == IntPtr.Zero || glowObject.dwEntity != verify)
-                return;
+            //var verify = MemoryLoader.instance.Reader.Read<IntPtr>(_addr);
+            ////ILog.AddToLog("[GLOW]Before Write - Verify ", idx + " " + verify.ToString());
+            //if (verify == IntPtr.Zero || glowObject.pEntity != verify)
+            //    return;
             //MemoryLoader.instance.Reader.Write<m_dwGlowObject>(_addr, glowObject);
-            MemoryLoader.instance.Reader.Write<Vector3>(_addr + 0x04,
+            MemoryLoader.instance.Reader.Write<Vector3>(_addr + 0x08,
                 new Vector3(glowObject.R,
                 glowObject.G,
                 glowObject.B
                ));
-            MemoryLoader.instance.Reader.Write<float>(_addr + 0x10, glowObject.A);
-            MemoryLoader.instance.Reader.Write<float>(_addr + 0x18, glowObject.m_flGlowAlphaFunctionOfMaxVelocity);
-            MemoryLoader.instance.Reader.Write<float>(_addr + 0x1C, glowObject.m_flGlowAlphaMax);
-            MemoryLoader.instance.Reader.Write<bool>(_addr + 0x24, glowObject.bRenderWhenOccluded);
-            MemoryLoader.instance.Reader.Write<bool>(_addr + 0x25, glowObject.bRenderWhenUnoccluded);
-            MemoryLoader.instance.Reader.Write<bool>(_addr + 0x26, glowObject.bFullBloom);
-            MemoryLoader.instance.Reader.Write<byte>(_addr + 0x2C, glowObject.m_nRenderStyle);
+            MemoryLoader.instance.Reader.Write<float>(_addr + 0x14, glowObject.A);
+            MemoryLoader.instance.Reader.Write<float>(_addr + 0x1C, glowObject.m_flGlowAlphaFunctionOfMaxVelocity);
+            MemoryLoader.instance.Reader.Write<float>(_addr + 0x20, glowObject.m_flGlowAlphaMax);
+            MemoryLoader.instance.Reader.Write<bool>(_addr + 0x28, glowObject.bRenderWhenOccluded);
+            MemoryLoader.instance.Reader.Write<bool>(_addr + 0x29, glowObject.bRenderWhenUnoccluded);
+            MemoryLoader.instance.Reader.Write<bool>(_addr + 0x2A, glowObject.bFullBloom);
+            MemoryLoader.instance.Reader.Write<byte>(_addr + 0x30, glowObject.m_nRenderStyle);
             //ILog.AddToLog("[GLOW]After Write", "SUCCESS");
             //MemoryLoader.instance.Reader.Write<m_dwGlowObject_NOENT>(_addr, glowObject); //+ 0x4 ?
         }
@@ -106,12 +106,12 @@ namespace RRFull.Skills
             //ILog.AddToLog("[GLOW]Before Write - Verify ", idx + " " + verify.ToString());
             if (verify == IntPtr.Zero || glowObject.dwEntity != verify)
                 return;
-            MemoryLoader.instance.Reader.Write<Vector3>(_addr + 0x04,
+            MemoryLoader.instance.Reader.Write<Vector3>(_addr + 0x08,
                 new Vector3(0f,
                 0f,
                 0f
                ));
-            MemoryLoader.instance.Reader.Write<float>(_addr + 0x10, 0f);
+            MemoryLoader.instance.Reader.Write<float>(_addr + 0x14, 0f);
         }
 
         bool ShouldUpdate(m_dwGlowObject s, SharpDX.Color c)
