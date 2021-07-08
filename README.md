@@ -6,8 +6,8 @@
 External Counter-Strike: Global Offensive Multihack.<br>
 
 Featuring Aimbot, Visuals (Overlay/ESP), Glow, Neon, Environment- & Sun control, integrated sound engine using NAudio to play hitmarker sounds, quake sounds and your favourite meme sounds plus millions of other features and (nearly) all engine entities are included.<br><br>
-<a href="https://rrcheats.eu/page/features">Compiled list of (mostly) all Features here.</a><br>
-Project Page's: https://RRCHEATS.EU // https://HVHC.EU // https://FOREVERWARE.GAY // https://FOREVERWARE.CC // https://RESURRECTED.CC<br><br>
+<a href="https://rrcheats.eu/page/features">Compiled list of (mostly) all Features here.</a><br><br>
+<center>https://RRCHEATS.EU // https://HVHC.EU // https://FOREVERWARE.GAY // https://FOREVERWARE.CC // https://RESURRECTED.CC</center><br><br>
 Visit the project page for the addons or to download a compiled assembly handcrafted by our artificial intelligence cloud network to keep you safe at all times.<br>
 
 Uses Fody Weavers to compile single executable.
