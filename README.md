@@ -1,5 +1,6 @@
 <h2> Resurrected Eternal (V3)</h2>
-<a href="https://rrcheats.eu">RRCHEATS.EU</a> // <a href="https://HVHC.eu">HVHC.EU</a> // <a href="https://FOREVERWARE.gay">FOREVERWARE.GAY</a> // <a href="https://FOREVERWARE.cc">FOREVERWARE.CC</a> // <a href="https://RESURRECTED.cc">RESURRECTED.CC</a><
+<a href="https://rrcheats.eu">RRCHEATS.EU</a> // <a href="https://HVHC.eu">HVHC.EU</a> // <a href="https://FOREVERWARE.gay">FOREVERWARE.GAY</a> // <a href="https://FOREVERWARE.cc">FOREVERWARE.CC</a> // <a href="https://RESURRECTED.cc">RESURRECTED.CC</a>
+<br>
 <p align="center">
   <img width="100%" height="480" src="https://www.hvhc.eu/assets/flex/add/csgo_9.jpg">
 </p>
