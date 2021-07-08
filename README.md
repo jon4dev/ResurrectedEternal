@@ -4,18 +4,19 @@
 
 # Resurrected Eternal (V3) - Summary
 External Counter-Strike: Global Offensive Multihack.<br>
-Project Page: https://rrcheats.eu // https://hvhc.eu<br><br>
+
 Featuring Aimbot, Visuals (Overlay/ESP), Glow, Neon, Environment- & Sun control, integrated sound engine using NAudio to play hitmarker sounds, quake sounds and your favourite meme sounds plus millions of other features and (nearly) all engine entities are included.<br><br>
-Visit https://rrcheats.eu for the addons or to download a compiled assembly.<br>
+<a href="https://rrcheats.eu/page/features">Compiled list of (mostly) all Features here.</a><br>
+Project Page's: https://RRCHEATS.EU // https://HVHC.EU // https://FOREVERWARE.GAY // https://FOREVERWARE.CC // https://RESURRECTED.CC<br><br>
+Visit the project page for the addons or to download a compiled assembly handcrafted by our artificial intelligence cloud network to keep you safe at all times.<br>
 
 Uses Fody Weavers to compile single executable.
+
 <br>
-<a href="https://rrcheats.eu/page/features">Compiled list of (mostly) all Features here.</a>
 
-
-# HvHARDCORE
-Part of the Project. Visit our project page on https://hvhc.eu and play on our official ranked servers to gather specific statistics about yourself such as: <br>hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.<br>
-Log in using steam and become part of "EUROPES MOST WANTED" and to see how much growth you've had for 30 days.<br>
+# HvHARDCORE /// LAST MAN STANDING
+Visit us on our website and play on our official <strong>ranked servers</strong> to gather specific statistics about yourself such as: <br>hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.<br>
+Log in using steam and become part of "EUROPES MOST WANTED" and to see detailed statistics about how much growth you've had for 30 days.<br><br>
 <strong>Join the Madness</strong>.
 
 
