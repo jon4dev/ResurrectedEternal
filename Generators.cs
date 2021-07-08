@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using RRFull.BaseObjects;
 using RRFull.BaseObjects.Fire;
 using RRFull.BSPParse;
@@ -1103,7 +1103,7 @@ namespace RRFull
                      new SerialPattern
                     {
                         Name = "dwClientState_ViewAngles",
-                        Pattern = "F3 0F 11 80 ? ? ? ? D9 46 04 D9 05",
+                        Pattern = "F3 0F 11 80 ? ? ? ? F3 0F 10 44 24 38",
                         Extra = 4,
                         Offset = 0,
                         Relative = false
