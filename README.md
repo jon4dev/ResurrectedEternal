@@ -35,7 +35,7 @@ Log in using steam and become part of "EUROPES MOST WANTED" and to see detailed 
 7. Profit!
 
 ## How to Run:
-1. Download Hack from rrcheats.eu
+1. <a href="https://www.foreverware.gay/page/install" target="_blank">Download Hack</a>
 2. Put Hack somewhere safe. (C:\notahack\AABBCCDD3344.exe)
 3. Run Hack or CSGO.
 4. Run CSGO or Hack.
