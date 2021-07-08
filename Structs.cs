@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
 
@@ -313,55 +313,88 @@ public struct CGlobalVarsBase
 [StructLayout(LayoutKind.Explicit)]
 struct m_dwGlowObject
 {
-    [FieldOffset(0x00)]
+    [FieldOffset(0x04)]
     public IntPtr dwEntity; //0x0000
 
-    [FieldOffset(0x04)]
+    [FieldOffset(0x08)]
     public float R; //0x0004
 
-    [FieldOffset(0x08)]
+    [FieldOffset(0x0C)]
     public float G; //0x0008
 
-    [FieldOffset(0x0C)]
+    [FieldOffset(0x10)]
     public float B; //0x000C
 
-    [FieldOffset(0x10)]
+    [FieldOffset(0x14)]
     public float A; //0x0010
 
-    [FieldOffset(0x18)]
-    public float m_flGlowAlphaFunctionOfMaxVelocity; //0x0010
     [FieldOffset(0x1C)]
-    public float m_flGlowAlphaMax; //0x0010
+    public float m_flGlowAlphaFunctionOfMaxVelocity; //0x0010
     [FieldOffset(0x20)]
-    public float m_flGlowPulseOverdrive; //0x0010
+    public float m_flGlowAlphaMax; //0x0010
+    //[FieldOffset(0x20)]
+    ///public float m_flGlowPulseOverdrive; //0x0010
 
     //[FieldOffset(0x14)]
     //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
     //public byte[] unkA; //0x0014 -> 0x20 JUNK
 
-    [FieldOffset(0x24)]
+    [FieldOffset(0x28)]
     public bool bRenderWhenOccluded; //0x0024
 
-    [FieldOffset(0x25)]
+    [FieldOffset(0x29)]
     public bool bRenderWhenUnoccluded; //0x0025
 
-    [FieldOffset(0x26)]
+    [FieldOffset(0x2A)]
     public bool bFullBloom; //0x0026
 
-    //[FieldOffset(0x27)]
-    //public byte gayBytes;
 
-    //[FieldOffset(0x28)]
-    //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
-    //public byte[] unkB; //0x0027 -> 2B 5 
-
-    [FieldOffset(0x2C)]
+    [FieldOffset(0x30)]
     public byte m_nRenderStyle; //0x002C
-
-    //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 7)]
-    //[FieldOffset(0x30)]
-    //public byte[] unkC;
 }
+
+//[StructLayout(LayoutKind.Explicit)]
+//struct m_dwGlowObject
+//{
+//    [FieldOffset(0x04)]
+//    public IntPtr dwEntity; //0x0000
+
+//    [FieldOffset(0x08)]
+//    public float R; //0x0004
+
+//    [FieldOffset(0x0C)]
+//    public float G; //0x0008
+
+//    [FieldOffset(0x10)]
+//    public float B; //0x000C
+
+//    [FieldOffset(0x14)]
+//    public float A; //0x0010
+
+//    [FieldOffset(0x1C)]
+//    public float m_flGlowAlphaFunctionOfMaxVelocity; //0x0010
+//    [FieldOffset(0x20)]
+//    public float m_flGlowAlphaMax; //0x0010
+//    //[FieldOffset(0x20)]
+//    ///public float m_flGlowPulseOverdrive; //0x0010
+
+//    //[FieldOffset(0x14)]
+//    //[MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
+//    //public byte[] unkA; //0x0014 -> 0x20 JUNK
+
+//    [FieldOffset(0x28)]
+//    public bool bRenderWhenOccluded; //0x0024
+
+//    [FieldOffset(0x29)]
+//    public bool bRenderWhenUnoccluded; //0x0025
+
+//    [FieldOffset(0x2A)]
+//    public bool bFullBloom; //0x0026
+
+
+//    [FieldOffset(0x30)]
+//    public byte m_nRenderStyle; //0x002C
+//}
 
 
 [StructLayout(LayoutKind.Explicit)]
