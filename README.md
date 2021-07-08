@@ -51,14 +51,7 @@ Uses Fody Weavers to compile single executable.
 3. Console -> Type !help to get a overview of all available commands.
 
 
-
-# VAC Proof?
-Using the "unchanged" compiled assembly might or might not become detected in the future.<br> So the current status is: <strong><em>Use at own Risk</em></strong><br>
-To get a <strong>version that is proof until the end of time</strong> (or if VAC releases a heavy update),<br> download a compiled assembly from our project page on rrcheats.eu
-
-
-
-# HvHARDCORE /// LAST MAN STANDING
+# PROJECT: HvHARDCORE /// LAST MAN STANDING
 Visit us on our website and play on our official <strong>ranked servers</strong> to gather specific statistics about yourself such as: <br>hitbox data, kills, headshots, shots, hits, mvp's, no scopes, wallbang and many many more.<br>
 Log in using steam and become part of "EUROPES MOST WANTED" and to see detailed statistics about how much growth you've had for 30 days.<br><br>
 <strong>Join the Madness</strong>.
