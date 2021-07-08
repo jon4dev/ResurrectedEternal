@@ -25,7 +25,7 @@ Log in using steam and become part of "EUROPES MOST WANTED" and to see detailed 
 
 # Instructions
 
-## How to compile:
+## How to Compile:
 1. Download 
 2. Open .sln 
 3. Wait for NuGet to do its thing. 
@@ -42,14 +42,24 @@ Log in using steam and become part of "EUROPES MOST WANTED" and to see detailed 
 5. ???
 6. Profit!
 
+## Navigation
 
-# Updating Offsets
+1. Menukey: Insert
+2. PanicKey: Pos1
+3. Console -> Type !help to get a overview of all available commands.
+
+
+# Dev Shit
+
+## Updating Offsets
 Inside GenericObjects folder you can find the "equivalent" file for updating the offsets.<br>
 The only one you really need to update is the <strong>dwGetAllClasses</strong> offset since the signature scanner cant find it.<br>
+A couple of offsets can be found inside various SkillModule classes. Most prevailant in SkillModNeon.cs
 <br>
 
-# Updating Signatures
-If a signature breaks you can update the ./configs/signatures.json file or update the sigs inside the Generators.cs and delete the signatures.json. <br>Please refer to the hazedumper signatures if you need to do that.<br>https://github.com/frk1/hazedumper/blob/master/config.json
+## Updating Signatures
+If a signature breaks you can update the ./configs/signatures.json file or update the sigs inside the Generators.cs and delete the signatures.json. <br>
+Please refer to the hazedumper signatures if you need to do that.<br>https://github.com/frk1/hazedumper/blob/master/config.json
 
 
 ## tl:dr
@@ -65,6 +75,8 @@ aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner - frk - ReactiioN
 <p align="center">
   <img src="https://github.com/sirk1x/ResurrectedEternal/blob/main/magnum.jpg?raw=true">
 </p>
+
+<a hef="https://manjaro.org/">install linux</a>
 
 ### License
 Licensed under the <a href="https://github.com/sirk1x/ResurrectedEternal/blob/main/LICENSE">GNU Affero General Public License v3.0</a><br>
