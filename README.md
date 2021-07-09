@@ -65,7 +65,7 @@ Login using Steam and get access to your profile to see even more details about 
 ## Updating Offsets
 Inside GenericObjects folder you can find the "equivalent" file for updating the offsets.<br>
 The only one you really need to update is the <strong>dwGetAllClasses</strong> offset since the signature scanner cant find it.<br>
-A couple of offsets can be found inside various SkillModule classes. Most prevailant in SkillModNeon.cs
+A couple of offsets can be found inside various components. Most prevailant in SkillModNeon.cs
 <br>
 
 ## Updating Signatures
