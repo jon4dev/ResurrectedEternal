@@ -79,7 +79,7 @@ yep big cock
 
 ## shoutouts
 
-aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner - frk - ReactiioN
+aevitas - OnTheFly - eXo - ΞиΛc1ЯЯuH - y3t1y3t - ZAT - TheRioMiner - frk - ReactiioN
 
 
 ## Final Version (most likely)
