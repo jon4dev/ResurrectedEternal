@@ -87,7 +87,7 @@ aevitas - OnTheFly - eXo - y3t1y3t - ZAT - TheRioMiner - frk - ReactiioN
   <img src="https://github.com/sirk1x/ResurrectedEternal/blob/main/magnum.jpg?raw=true">
 </p>
 
-<a href="https://manjaro.org/">install linux</a>
+<a href="https://artixlinux.org/">install linux</a>
 
 ### License
 Licensed under the <a href="https://github.com/sirk1x/ResurrectedEternal/blob/main/LICENSE">GNU Affero General Public License v3.0</a><br>
