@@ -201,6 +201,7 @@ namespace RRFull.Menu
 
                 Thread.Sleep(16);
             }
+            Console.WriteLine("MouseHook thread exited");
         }
 
         void ShowHide()

@@ -257,79 +257,90 @@ namespace RRFull.Menu
         {
             while (true)
             {
-                if (_CaptureInput)
+                try
                 {
-                    GetCursorPos(ref MousePos);
-                    MousePos.X -= m_nMouseOffsetX;
-                    MousePos.Y -= m_nMouseOffsetY;
-                    var active = MainMenu.MenuBase.GetActiveBit();
-                    foreach (var item in MainMenu.MenuBase.NavigationEntries)
+                    if (_CaptureInput)
                     {
-
-                        if (item == active)
-                            continue;
-
-                        if (item.Rect.Contains(new Point(MousePos.X, MousePos.Y)))
-                            item.OnEnter();
-                        else
-                            item.OnExit();
-                    }
-
-                    foreach (var item in MainMenu.Buttons)
-                    {
-                        if (item.Rect.Contains(new Point(MousePos.X, MousePos.Y)))
-                            item.OnMouseEnter();
-                        else
-                            item.OnMouseExit();
-                    }
-
-                    var container = MainMenu.MenuBase.GetActiveBit();
-                    if (container != null)
-                    {
-                        //StringContainer _activeBit = null;
-                        foreach (var _cont in container.ActiveContainer.StringContainers)
+                        GetCursorPos(ref MousePos);
+                        MousePos.X -= m_nMouseOffsetX;
+                        MousePos.Y -= m_nMouseOffsetY;
+                        var active = MainMenu.MenuBase.GetActiveBit();
+                        foreach (var item in MainMenu.MenuBase.NavigationEntries)
                         {
-                            if (_cont.Rect.Contains(new Point(MousePos.X, MousePos.Y)))
-                            {
-                                _cont.OnEnter();
-                            }
+                            if (item == null)
+                                continue;
+                            if (item == active)
+                                continue;
+
+                            if (item.Rect.Contains(new Point(MousePos.X, MousePos.Y)))
+                                item.OnEnter();
                             else
-                            {
-                                _cont.OnExit();
-                            }
-
+                                item.OnExit();
                         }
-                    }
-                    if (KeyHandles.Down)
-                    {
-                        if (KeyHandles.Elapsed)
+
+                        foreach (var item in MainMenu.Buttons)
                         {
+                            if (item == null)
+                                continue;
+                            if (item.Rect.Contains(new Point(MousePos.X, MousePos.Y)))
+                                item.OnMouseEnter();
+                            else
+                                item.OnMouseExit();
+                        }
 
-                            var activeBit = MainMenu.MenuBase.GetActiveBit();
-                            if (activeBit == null)
-                                return;
-
-
-                            var _activeContainer = activeBit.GetActiveContainer();
-                            if (_activeContainer == null)
-                                return;
-
-                            if (_mbutton == System.Windows.Forms.MouseButtons.Left)
+                        var container = MainMenu.MenuBase.GetActiveBit();
+                        if (container != null)
+                        {
+                            //StringContainer _activeBit = null;
+                            foreach (var _cont in container.ActiveContainer.StringContainers)
                             {
-                                _activeContainer.Increment();
+                                if (_cont.Rect.Contains(new Point(MousePos.X, MousePos.Y)))
+                                {
+                                    _cont.OnEnter();
+                                }
+                                else
+                                {
+                                    _cont.OnExit();
+                                }
+
                             }
-                            else if(_mbutton == System.Windows.Forms.MouseButtons.Right)
+                        }
+                        if (KeyHandles.Down)
+                        {
+                            if (KeyHandles.Elapsed)
                             {
-                                _activeContainer.Decrement();
+
+                                var activeBit = MainMenu.MenuBase.GetActiveBit();
+                                if (activeBit == null)
+                                    continue;
+
+
+                                var _activeContainer = activeBit.GetActiveContainer();
+                                if (_activeContainer == null)
+                                    continue;
+
+                                if (_mbutton == System.Windows.Forms.MouseButtons.Left)
+                                {
+                                    _activeContainer.Increment();
+                                }
+                                else if (_mbutton == System.Windows.Forms.MouseButtons.Right)
+                                {
+                                    _activeContainer.Decrement();
+                                }
+                                //CheckNavEntries(MousePos.X, MousePos.Y);
+                                //CheckButtons(MousePos.X, MousePos.Y, e.Button);
                             }
-                                    //CheckNavEntries(MousePos.X, MousePos.Y);
-                                    //CheckButtons(MousePos.X, MousePos.Y, e.Button);
                         }
                     }
+                } catch (Exception e)
+                {
+                    throw e;
                 }
+
 
                 Thread.Sleep(16);
             }
+            Console.WriteLine("MouseHook thread exited");
         }
 
         private bool _CaptureInput = false;

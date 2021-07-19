@@ -11,9 +11,10 @@ namespace RRFull.GenericObjects
 {
     public class Offsets
     {
-        public int m_dwGetAllClasses = 0xDB101C;
+
 
         #region "signatures"
+        public int m_dwGetAllClasses; // = 0xDB101C;
         public int dwViewMatrix;// 0x4D93824;
         public int dwEntityList;// 0x4DA1F24;
         public int dwRadarBase;// 0x51D6C9C;//0x518810C;

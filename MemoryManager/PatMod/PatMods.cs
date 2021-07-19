@@ -15,8 +15,8 @@ namespace RRFull.MemoryManager.PatMod
     {
         public string Name;
         public string Pattern;
-        public int Offset;
         public int Extra;
+        public int Offset;
         public bool Relative = true;
         public bool SubtractOnly = false;
     }

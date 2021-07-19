@@ -35,8 +35,8 @@ namespace RRFull.Configs.GamePlayConfig
             MaxValue = 180f,
             MinValue = 1f,
             //ValueType = typeof(float),
-            Value = 3f,
-            Incremental = 1f,
+            Value = 1.5f,
+            Incremental = .5f,
             IsGrouped = true,
             GroupId = "col2"
         };

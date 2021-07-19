@@ -187,6 +187,28 @@ namespace ResurrectedEternal.Configs.GamePlayConfig
             IsGrouped = true,
             GroupId = "row6"
         };
+        public ConfigValueEntry ScreenOffsetX = new ConfigValueEntry
+        {
+            Header = "Screen Offset",
+            Name = "Offset X",
+            MaxValue = float.MaxValue,
+            MinValue = 0f,
+            Value = 0f,
+            //ValueType = typeof(bool),
+            IsGrouped = true,
+            GroupId = "screen_offset"
+        };
+        public ConfigValueEntry ScreenOffsetY = new ConfigValueEntry
+        {
+            Header = "Screen Offset",
+            Name = "Offset Y",
+            MaxValue = float.MaxValue,
+            MinValue = 0f,
+            Value = 0f,
+            //ValueType = typeof(bool),
+            IsGrouped = true,
+            GroupId = "screen_offset"
+        };
         //public ConfigValueEntry fCustomHudSize = new ConfigValueEntry()
         //{
 

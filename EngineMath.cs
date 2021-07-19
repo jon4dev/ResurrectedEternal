@@ -137,6 +137,15 @@ namespace RRFull
         //    return worlds;
 
         //}
+
+        public static Vector2 ScreenOffset
+        {
+            get
+            {
+                return new Vector2((float)g_Globals.Config.HudConfig.ScreenOffsetX.Value, (float)g_Globals.Config.HudConfig.ScreenOffsetY.Value);
+            }
+        }
+
         public static bool WorldToScreen(view_matrix_t viewMatrix, Size2 screenSize, Vector3 point3D, out Vector2 screenPos)
         {
             screenPos = Vector2.Zero;
@@ -156,7 +165,7 @@ namespace RRFull
                 (viewMatrix[1, 0] * point3D.X + viewMatrix[1, 1] * point3D.Y + viewMatrix[1, 2] * point3D.Z + viewMatrix[1, 3])
                 * inverseX)
                 * screenSize.Height + 0.5f);
-
+            screenPos += ScreenOffset;
             return true;
         }
 
@@ -203,53 +212,7 @@ namespace RRFull
         {
             return a - (b - a) * t;
         }
-        //public static bool WorldToScreen(view_matrix_t matrix, Size2 screenSize, Vector3 worldPos, out Vector2 screenPos)
-        //{
-        //    screenPos.X = matrix[0, 0] * worldPos.X + matrix[0, 1] * worldPos.Y + matrix[0, 2] * worldPos.Z + matrix[0, 3];
-        //    screenPos.Y = matrix[1, 0] * worldPos.X + matrix[1, 1] * worldPos.Y + matrix[1, 2] * worldPos.Z + matrix[1, 3];
-        //    float w = matrix[3, 0] * worldPos.X + matrix[3, 1] * worldPos.Y + matrix[3, 2] * worldPos.Z + matrix[3, 3];
-        //    if (w < 0.01f)
-        //        return false;
-        //    float inverse = 1f / w;
-        //    screenPos.X *= inverse;
-        //    screenPos.Y *= inverse;
 
-        //    float x = (float)screenSize.Width * 0.5f;
-        //    float y = (float)screenSize.Height * 0.5f;
-        //    x += 0.5f * screenPos.X * (float)screenSize.Width + 0.5f;
-        //    y += 0.5f * screenPos.Y * (float)screenSize.Height + 0.5f;
-
-        //    screenPos.X = x;
-        //    screenPos.Y = y;
-        //    return true;
-
-        //}
-
-        //public static Vector2 WorldToScreen(Matrix4x4 viewMatrix, Size2 screenSize, Vector3 point)
-        //{
-        //    //var screenSize = new Size2(Convert.ToInt32(sSize.Width * 0.9f), Convert.ToInt32(sSize.Height * 0.9f));
-        //    Vector2 returnVector = Vector2.Zero;
-        //    if (viewMatrix == null)
-        //        return returnVector;
-        //    float w = viewMatrix.M41 * point.X + viewMatrix.M42 * point.Y + viewMatrix.M43 * point.Z + viewMatrix.M44;
-        //    if (w >= 0.01f)
-        //    {
-        //        float inverseWidth = 1f / w;
-        //        returnVector.Y =
-        //            (screenSize.Height / 2f) -
-        //            (0.5f * (
-        //            (viewMatrix.M21 * point.X + viewMatrix.M22 * point.Y + viewMatrix.M23 * point.Z + viewMatrix.M24)
-        //            * inverseWidth)
-        //            * screenSize.Height - 0.5f);
-        //        returnVector.X =
-        //            (screenSize.Width / 2f) +
-        //            (0.5f * (
-        //            (viewMatrix.M11 * point.X + viewMatrix.M12 * point.Y + viewMatrix.M13 * point.Z + viewMatrix.M14)
-        //            * inverseWidth)
-        //            * screenSize.Width - 0.5f);
-        //    }
-        //    return returnVector;
-        //}
         public static float Angle(Vector3 from, Vector3 to)
         {
             from.Normalize();

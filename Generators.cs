@@ -991,6 +991,10 @@ namespace RRFull
             }
         }
 
+        /// <summary>
+        /// Offsets must be the same name as the variable or otherwise reflection wont find it.
+        /// </summary>
+        /// <returns></returns>
         internal static ModulePattern[] CreateModulePattern()
         {
             return new ModulePattern[]
@@ -1004,51 +1008,51 @@ namespace RRFull
                     {
                         Name = "dwViewMatrix",
                         Pattern = "0F 10 05 ? ? ? ? 8D 85 ? ? ? ? B9",
-                        Extra = 3,
-                        Offset = 176
+                        Offset = 3,
+                        Extra = 176
 
                     },
                     new SerialPattern
                     {
                         Name = "dwEntityList",
                         Pattern = "BB ? ? ? ? 83 FF 01 0F 8C ? ? ? ? 3B F8",
-                        Extra = 0x1,
-                        Offset = 0
+                        Offset = 0x1,
+                        Extra = 0
                     },
                     new SerialPattern
                     {
                         Name = "dwGameRulesProxy",
                         Pattern = "A1 ? ? ? ? 85 C0 0F 84 ? ? ? ? 80 B8 ? ? ? ? ? 74 7A",
-                        Extra = 1,
-                        Offset = 0
+                        Offset = 1,
+                        Extra = 0
                     },
                     new SerialPattern
                     {
                         Name = "dwGlowObjectManager",
                         Pattern = "A1 ? ? ? ? A8 01 75 4B",
-                        Extra = 0x1,
-                        Offset = 4
+                        Offset = 0x1,
+                        Extra = 4
                     },
                     new SerialPattern
                     {
                         Name = "dwRadarBase",
                         Pattern = "A1 ? ? ? ? 8B 0C B0 8B 01 FF 50 ? 46 3B 35 ? ? ? ? 7C EA 8B 0D",
-                        Extra = 0x1,
-                        Offset = 0
+                        Offset = 0x1,
+                        Extra = 0
                     },
                     new SerialPattern
                     {
                         Name = "dwForceJump",
                         Pattern = "8B 0D ? ? ? ? 8B D6 8B C1 83 CA 02",
-                        Extra = 0x2,
-                        Offset = 0
+                        Offset = 0x2,
+                        Extra = 0
                     },
                     new SerialPattern
                     {
                         Name = "dwForceAttack",
                         Pattern = "89 0D ? ? ? ? 8B 0D ? ? ? ? 8B F2 8B C1 83 CE 04",
-                        Extra = 0x2,
-                        Offset = 0
+                        Offset = 0x2,
+                        Extra = 0
                     },
                     new SerialPattern
                     {
@@ -1059,6 +1063,13 @@ namespace RRFull
                         Relative = true,
                         SubtractOnly = true
 
+                    },
+                    new SerialPattern
+                    {
+                        Name = "m_dwGetAllClasses",
+                        Pattern = "A1 ? ? ? ? C3 CC CC CC CC CC CC CC CC CC CC A1 ? ? ? ? B9",
+                        Relative = true,
+                        Offset = 1
                     }
                 }
                },
@@ -1071,16 +1082,16 @@ namespace RRFull
                     {
                         Name = "dwClientState",
                         Pattern = "A1 ? ? ? ? 33 D2 6A 00 6A 00 33 C9 89 B0",
-                        Extra = 1,
-                        Offset = 0
+                        Offset = 1,
+                        Extra = 0
 
                     },
                     new SerialPattern
                     {
                         Name = "dwModelPrecacheTable",
                         Pattern = "8B 8E ? ? ? ? 8B D0 85 C9",
-                        Extra = 2,
-                        Offset = 0,
+                        Offset = 2,
+                        Extra = 0,
                         Relative = false
 
                     },
@@ -1088,53 +1099,53 @@ namespace RRFull
                     {
                         Name = "dwGlobalVars",
                         Pattern = "68 ? ? ? ? 68 ? ? ? ? FF 50 08 85 C0",
-                        Extra = 1,
-                        Offset = 0
+                        Offset = 1,
+                        Extra = 0
 
                     },
                     new SerialPattern
                     {
                         Name = "dwPlayerInfo",
                         Pattern = "8B 89 ? ? ? ? 85 C9 0F 84 ? ? ? ? 8B 01",
-                        Extra = 2,
-                        Offset = 0,
+                        Offset = 2,
+                        Extra = 0,
                         Relative = false
                     },
                      new SerialPattern
                     {
                         Name = "dwClientState_ViewAngles",
                         Pattern = "F3 0F 11 80 ? ? ? ? F3 0F 10 44 24 38",
-                        Extra = 4,
-                        Offset = 0,
+                        Offset = 4,
+                        Extra = 0,
                         Relative = false
                     },
                                           new SerialPattern
                     {
                         Name = "m_dwLocalPlayerIndex",
                         Pattern = "8B 80 ? ? ? ? 40 C3",
-                        Extra = 2,
-                        Offset = 0,
+                        Offset = 2,
+                        Extra = 0,
                         Relative = false
                     },
                                           new SerialPattern
                                           {
                                               Name = "dwClientState_MaxPlayer",
                                               Pattern = "A1 ? ? ? ? 8B 80 ? ? ? ? C3 CC CC CC CC 55 8B EC 8A 45 08",
-                                              Extra = 2,
+                                              Offset = 2,
                                               Relative = false
                                           },
                                           new SerialPattern
                                           {
                                               Name = "dwClientState_MapDirectory",
                                               Pattern = "B8 ? ? ? ? C3 05 ? ? ? ? C3",
-                                              Extra = 7,
+                                              Offset = 7,
                                               Relative = false
                                           },
                                           new SerialPattern
                                           {
                                               Name = "dwClientState_Map",
                                               Pattern = "05 ? ? ? ? C3 CC CC CC CC CC CC CC A1",
-                                              Extra = 1,
+                                              Offset = 1,
                                               Relative = false
                                           }
                 }
@@ -1148,16 +1159,16 @@ namespace RRFull
                     {
                         Name = "m_engineCvar",
                         Pattern = "8B 0D ? ? ? ? C7 05",
-                        Extra = 2,
-                        Offset = 0
+                        Offset = 2,
+                        Extra = 0
 
                     },
                     new SerialPattern
                     {
                         Name = "m_dwConvarTable",
                         Pattern = "8B 3C 85",
-                        Extra = 3,
-                        Offset = 0
+                        Offset = 3,
+                        Extra = 0
                     }
                 }
             }

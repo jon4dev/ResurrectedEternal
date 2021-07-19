@@ -88,12 +88,12 @@ namespace RRFull
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            //Console.WriteLine(e.ToString());
+           Console.WriteLine(e.ToString());
         }
 
         private void CurrentDomain_FirstChanceException(object sender, FirstChanceExceptionEventArgs e)
         {
-            //Console.WriteLine(e.Exception.ToString());
+            Console.WriteLine(e.Exception.ToString());
         }
 
         private Modus previousMode;
@@ -187,11 +187,16 @@ namespace RRFull
 
         private int Read(MemoryManager.PatMod.SerialPattern _pattern)
         {
+            if(_pattern.Name == "m_dwGetAllClasses")
+            {
+                var _address = Memory.Reader.GetAllClasses(_pattern.Pattern, RedRain.ScanFlags.SUBSTRACT_BASE, new int[] { 1, 0 }, _pattern.Extra);
+                return _address;
+            }
             if (_pattern.SubtractOnly)
-                return Memory.Reader.FindPattern(_pattern.Pattern, RedRain.ScanFlags.SUBSTRACT_BASE, _pattern.Extra, _pattern.Offset);
+                return Memory.Reader.FindPattern(_pattern.Pattern, RedRain.ScanFlags.SUBSTRACT_BASE, _pattern.Offset, _pattern.Extra);
             if (_pattern.Relative)
-                return Memory.Reader.FindPattern(_pattern.Pattern, RedRain.ScanFlags.READ | RedRain.ScanFlags.SUBSTRACT_BASE, _pattern.Extra, _pattern.Offset);
-            return Memory.Reader.FindPattern(_pattern.Pattern, RedRain.ScanFlags.READ, _pattern.Extra, _pattern.Offset);
+                return Memory.Reader.FindPattern(_pattern.Pattern, RedRain.ScanFlags.READ | RedRain.ScanFlags.SUBSTRACT_BASE, _pattern.Offset, _pattern.Extra);
+            return Memory.Reader.FindPattern(_pattern.Pattern, RedRain.ScanFlags.READ, _pattern.Offset, _pattern.Extra);
         }
 
         private void ApplyOffset(string name, int offset)

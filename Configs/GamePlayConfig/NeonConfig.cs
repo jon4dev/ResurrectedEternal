@@ -36,19 +36,14 @@ namespace RRFull.Configs.GamePlayConfig
             MaxValue = 20,
             MinValue = 0.1f,
             Incremental = 0.1f,
-            Value = 1f,
+            Value = 6f,
             //ValueType = typeof(float),
             ConvarName = "glow_outline_width",
             ConvarRequire = "Enable",
             IsGrouped = true,
             GroupId = "row2"
         };
-        //public ConfigValueEntry AlphaCap = new ConfigValueEntry
-        //{
-        //    Name = "Cap Alpha by Render Alpha",
-        //    Value = true,
-        //    //ValueType = typeof(bool),
-        //};
+
         public ConfigValueEntry MaxVelocity = new ConfigValueEntry
         {
             Name = "Movement Only",
@@ -60,15 +55,6 @@ namespace RRFull.Configs.GamePlayConfig
             GroupId = "row2"
         };
 
-        //public ConfigValueEntry PulseOverDrive = new ConfigValueEntry
-        //{
-        //    Name = "Glow Pulse Overdrive",
-        //    MaxValue = float.MaxValue,
-        //    MinValue = float.MinValue,
-        //    Incremental = 0.01f,
-        //    Value = 1f,
-        //    //ValueType = typeof(float),
-        //};
         public ConfigValueEntry GlowStyle = new ConfigValueEntry
         {
             Name = "Type",

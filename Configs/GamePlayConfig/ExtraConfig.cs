@@ -346,7 +346,7 @@ namespace RRFull.Configs.GamePlayConfig
         {
             Name = "Ragdoll Gravity",
             MaxValue = 1000f,
-            MinValue = 0f,
+            MinValue = -1000f,
             Value = 100f,
             //ValueType = typeof(int),
             ConvarName = "cl_ragdoll_gravity",
@@ -399,7 +399,7 @@ namespace RRFull.Configs.GamePlayConfig
         {
             Header = "Sound Control",
             Name = "Enable",
-            Value = false,
+            Value = true,
             //ValueType = typeof(KNIFEINDEX),
             IsGrouped = true,
             GroupId = "row9"
@@ -407,7 +407,7 @@ namespace RRFull.Configs.GamePlayConfig
         public ConfigValueEntry SoundVolume = new ConfigValueEntry
         {
             Name = "Volume",
-            Value = .255f,
+            Value = .15f,
             MaxValue = 1f,
             MinValue = 0f,
             Incremental = .01f,

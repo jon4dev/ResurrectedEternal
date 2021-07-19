@@ -42,6 +42,32 @@ namespace RRFull.Skills
 
         private bool MenuAvailable = false;
 
+        private bool _hasDrawn = false;
+
+        private bool _isForeGround = true;
+        private MenuState CurrentMenuState = MenuState.Close;
+        string name = "";
+
+        private string PlayerInfo = "";
+
+        Vector2 _oneQuart;
+        private List<Tuple<string, Vector2, Color, DrawOffset>> BackgroundStrings = new List<Tuple<string, Vector2, Color, DrawOffset>>();
+        private List<Tuple<string, Vector2, Color, DrawOffset>> ForegroundString = new List<Tuple<string, Vector2, Color, DrawOffset>>();
+
+        private List<Tuple<string, Vector2, SharpDX.Color>> _menuEntrieRenderer = new List<Tuple<string, Vector2, Color>>();
+        Vector2 xOffset = Vector2.Zero;
+        private float CurrentLonges = 0f;
+        private Vector2 PushClipPosition = Vector2.Zero;
+        private Vector2 PushClipOffset = new Vector2(0f, 22f);
+        private int MaximumClipLength = 250;
+
+        float _maxAngle = 180.0f;
+        private Vector2 _screenCenter;
+
+        //›‹ ﴾﴿
+        string selector = "› ";
+        string subSelector = " ‹";
+
         public SkillModDrawing(Engine engine, Client client) : base(engine, client)
         {
             _renderObject = Skills.Factory.OverlayFactory.CreateRenderForm(Memory.MemoryLoader.instance.GetWindowRect());
@@ -122,8 +148,6 @@ namespace RRFull.Skills
             PushClipManager.AddClip(message, duration, clr);
         }
 
-        private bool _hasDrawn = false;
-
         private bool CanProcess()
         {
             if (ClientModus == Events.Modus.leaguemode
@@ -133,15 +157,12 @@ namespace RRFull.Skills
             return true;
         }
 
-        private bool _weHaveDrawn = false;
-        private bool _isForeGround = true;
 
         void GhettoStart()
         {
             if (Drawing == null)
                 return;
             Drawing.BeginDraw();
-            _weHaveDrawn = true;
         }
 
         void GhettoEnd()
@@ -149,7 +170,6 @@ namespace RRFull.Skills
             if (Drawing == null)
                 return;
             Drawing.EndDraw();
-            _weHaveDrawn = false;
 
         }
 
@@ -166,7 +186,7 @@ namespace RRFull.Skills
             _hasDrawn = true;
             BackgroundStrings.Clear();
             ForegroundString.Clear();
-
+            _screenCenter = new Vector2(Drawing.Size.Width / 2, Drawing.Size.Height / 2) + EngineMath.ScreenOffset;
         }
 
         public override void End()
@@ -175,7 +195,7 @@ namespace RRFull.Skills
             {
                 RenderPushClips();
                 RenderBackground();
-                      
+
                 RenderForeground();
 
                 DrawCrosshair();
@@ -187,12 +207,7 @@ namespace RRFull.Skills
         }
 
 
-        private MenuState CurrentMenuState = MenuState.Close;
-        string name = "";
 
-        private string PlayerInfo = "";
-
-        Vector2 _oneQuart;
         private void DrawWatermark()
         {
             if (!(bool)Config.VisualConfig.WaterMark.Value)
@@ -220,12 +235,7 @@ namespace RRFull.Skills
                 System.Threading.Thread.Sleep(1);
         }
 
-        private List<Tuple<string, Vector2, Color, DrawOffset>> BackgroundStrings = new List<Tuple<string, Vector2, Color, DrawOffset>>();
-        private List<Tuple<string, Vector2, Color, DrawOffset>> ForegroundString = new List<Tuple<string, Vector2, Color, DrawOffset>>();
 
-        private List<Tuple<string, Vector2, SharpDX.Color>> _menuEntrieRenderer = new List<Tuple<string, Vector2, Color>>();
-        Vector2 xOffset = Vector2.Zero;
-        private float CurrentLonges = 0f;
         private async void RenderBackground()
         {
             await RenderBack();
@@ -315,9 +325,6 @@ namespace RRFull.Skills
 
         }
 
-        private Vector2 PushClipPosition = Vector2.Zero;
-        private Vector2 PushClipOffset = new Vector2(0f, 22f);
-        private int MaximumClipLength = 250;
 
         private void RenderPushClips()
         {
@@ -398,36 +405,30 @@ namespace RRFull.Skills
             DrawFov();
         }
 
-        float _maxAngle = 180.0f;
-
 
 
 
         private void DrawFov()
         {
-            if (_screenCenter == Vector2.Zero)
-                _screenCenter = new Vector2(Drawing.Size.Width / 2, Drawing.Size.Height / 2);
+            //if (_screenCenter == Vector2.Zero)
+            var _fovOffset = new Vector2(Drawing.Size.Width / 2, Drawing.Size.Height / 2);
 
             float curAngle = (float)Config.AimbotConfig.Angle.Value;
             //float _percent = (curAngle / _maxAngle); // 30% = 0.3;
             float _inverspercent = (curAngle / _maxAngle) - 1f; //30% = 0.7
-            float _x = (_screenCenter.X * _inverspercent); //left
-            float _x2 = Drawing.Size.Width + (_screenCenter.X * _inverspercent); //right
-            float _y2 = Drawing.Size.Height + (_screenCenter.Y * _inverspercent);
-            Drawing.DrawLine(new Vector2(_screenCenter.X - 3, Drawing.Size.Height), new Vector2(-_x + 3, _y2), 2f, Color.Black);
-            Drawing.DrawLine(new Vector2(_screenCenter.X + 3, Drawing.Size.Height), new Vector2(_x2 - 3, _y2), 2f, Color.Black);
+            float _x = (_fovOffset.X * _inverspercent); //left
+            float _x2 = Drawing.Size.Width + (_fovOffset.X * _inverspercent); //right
+            float _y2 = Drawing.Size.Height + (_fovOffset.Y * _inverspercent);
+            Drawing.DrawLine(new Vector2(_fovOffset.X - 3, Drawing.Size.Height), new Vector2(-_x + 3, _y2), 2f, Color.Black);
+            Drawing.DrawLine(new Vector2(_fovOffset.X + 3, Drawing.Size.Height), new Vector2(_x2 - 3, _y2), 2f, Color.Black);
 
-            Drawing.DrawLine(new Vector2(_screenCenter.X, Drawing.Size.Height), new Vector2(-_x, _y2), 3f, Color.Cyan);
-            Drawing.DrawLine(new Vector2(_screenCenter.X, Drawing.Size.Height), new Vector2(_x2, _y2), 3f, Color.Cyan);
+            Drawing.DrawLine(new Vector2(_fovOffset.X, Drawing.Size.Height), new Vector2(-_x, _y2), 3f, Color.Cyan);
+            Drawing.DrawLine(new Vector2(_fovOffset.X, Drawing.Size.Height), new Vector2(_x2, _y2), 3f, Color.Cyan);
             //Drawing.DrawCircle(_screenCenter, (float)Config.AimbotConfig.Angle.Value * 2, (float)Config.AimbotConfig.Angle.Value * 2, Color.Green);
 
         }
 
-        private Vector2 _screenCenter;
 
-        //›‹ ﴾﴿
-        string selector = "› ";
-        string subSelector = " ‹";
         void DrawPlantedBomb()
         {
             var _b = Client.GetPlantedC4();
@@ -685,7 +686,7 @@ namespace RRFull.Skills
             //        if (EngineMath.WorldToScreen(Client.LocalPlayer.view_matrix_t, Drawing.Size, _b[i], out var _pos))
             //            Drawing.DrawDot(_pos, 3f, 3f, Color.AliceBlue);
             //    }
-                
+
             //}
 
             //DrawInferno();
@@ -889,16 +890,16 @@ namespace RRFull.Skills
                 {
                     var _text = _active.m_iClip + " / " + _active.m_iClip2;
                     var _measure = Drawing.MeasureString(_text, 30);
-                    Drawing.DrawText(_text, Color.White, new Vector2((Drawing.Size.Width / 2) - _measure.Center.X - 2, Drawing.Size.Height - _measure.Height-1), 30);
+                    Drawing.DrawText(_text, Color.White, new Vector2((Drawing.Size.Width / 2) - _measure.Center.X - 2, Drawing.Size.Height - _measure.Height - 1), 30);
                 }
 
             if (Client.LocalPlayer.m_bIsActive)
             {
                 Drawing.FillRectangle(new RectangleF(
-                    0, Drawing.Size.Height + 1, 
-                    12, -(Drawing.Size.Height * ((float)Client.LocalPlayer.m_iHealth / 100f )) - 2), Color.Black);
-                Drawing.FillRectangle(new RectangleF(1, Drawing.Size.Height, 10, -(Drawing.Size.Height * ((float)Client.LocalPlayer.m_iHealth / 100f ))), Generators.ColorByHealth(Client.LocalPlayer.m_iHealth));
-                Drawing.FillRectangle(new RectangleF(Drawing.Size.Width - 12, Drawing.Size.Height, 
+                    0, Drawing.Size.Height + 1,
+                    12, -(Drawing.Size.Height * ((float)Client.LocalPlayer.m_iHealth / 100f)) - 2), Color.Black);
+                Drawing.FillRectangle(new RectangleF(1, Drawing.Size.Height, 10, -(Drawing.Size.Height * ((float)Client.LocalPlayer.m_iHealth / 100f))), Generators.ColorByHealth(Client.LocalPlayer.m_iHealth));
+                Drawing.FillRectangle(new RectangleF(Drawing.Size.Width - 12, Drawing.Size.Height,
                     12, -(Drawing.Size.Height * ((float)Client.LocalPlayer.m_iArmor / 100f)) - 2), Color.Black);
                 Drawing.FillRectangle(new RectangleF(Drawing.Size.Width - 11, Drawing.Size.Height, 10, -(Drawing.Size.Height * ((float)Client.LocalPlayer.m_iArmor / 100f))), Color.RoyalBlue);
             }
@@ -952,15 +953,15 @@ namespace RRFull.Skills
         {
             if (!(bool)Config.HudConfig.bCrosshair.Value)
                 return;
-            
+
             var _vec = Vector2.Zero;
-            if((bool)Config.VisualConfig.ShowRecoil.Value && Client.LocalPlayer != null)
+            if ((bool)Config.VisualConfig.ShowRecoil.Value && Client.LocalPlayer != null)
             {
                 var _punch = Client.LocalPlayer.m_vaimPunchAngle;
                 _vec = new Vector2(-_punch.Y, _punch.X) * 5.141f;
             }
-          
-            Drawing.DrawCrosshair(new Vector2(Drawing.Size.Width / 2, Drawing.Size.Height / 2) + _vec,
+
+            Drawing.DrawCrosshair(_screenCenter + _vec,
                 (float)Config.HudConfig.fCrosshairLength.Value,
                 (float)Config.HudConfig.fCrosshairWidth.Value,
                 (Color)Config.OtherConfig.m_cCrossBase.Value,
