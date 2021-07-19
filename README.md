@@ -63,12 +63,13 @@ Login using Steam and get access to your profile to see even more details about 
 # Dev Shit
 
 ## Updating Offsets
-Inside GenericObjects folder you can find the "equivalent" file for updating the offsets.<br>
-The only one you really need to update is the <strong>dwGetAllClasses</strong> offset since the signature scanner cant find it.<br>
+~~Inside GenericObjects folder you can find the "equivalent" file for updating the offsets.<br>
+The only one you really need to update is the <strong>dwGetAllClasses</strong> offset since the signature scanner cant find it.<br>~~
 A couple of offsets can be found inside various components. Most prevailant in SkillModNeon.cs
 <br>
 
 ## Updating Signatures
+All necessary signatures are included and the hack should work until the next signature breaking update.<br>
 If a signature breaks you can update the ./configs/signatures.json file or update the sigs inside the Generators.cs and delete the signatures.json. <br>
 Please refer to the hazedumper signatures if you need to do that.<br>https://github.com/frk1/hazedumper/blob/master/config.json
 
