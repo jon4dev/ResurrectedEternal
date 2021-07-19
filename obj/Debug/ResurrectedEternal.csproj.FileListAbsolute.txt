@@ -1,9 +1,0 @@
-C:\Users\Freiheit\Documents\RRUPDATE\ResurrectedEternal\obj\Debug\ResurrectedEternal.csproj.AssemblyReference.cache
-C:\Users\Freiheit\Documents\RRUPDATE\ResurrectedEternal\obj\Debug\ResurrectedEternal.csproj.CoreCompileInputs.cache
-C:\Users\Freiheit\Documents\RRUPDATE\ResurrectedEternal\obj\Debug\ResurrectedEternal.exe
-C:\Users\Freiheit\Documents\RRUPDATE\ResurrectedEternal\obj\Debug\ResurrectedEternal.pdb
-C:\Users\Freiheit\Documents\RRUPDATE\build\ResurrectedEternal.exe.config
-C:\Users\Freiheit\Documents\RRUPDATE\build\ResurrectedEternal.exe
-C:\Users\Freiheit\Documents\RRUPDATE\build\ResurrectedEternal.pdb
-C:\Users\Freiheit\Documents\RRUPDATE\ResurrectedEternal\obj\Debug\ResurrectedEternal.csproj.Fody.CopyLocal.cache
-C:\Users\Freiheit\Documents\RRUPDATE\ResurrectedEternal\obj\Debug\ResurrectedEternal.csproj.CopyComplete
